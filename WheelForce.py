@@ -9,23 +9,28 @@ import matplotlib.pyplot as plt
 # ==========================================
 # Material selection system
 # ==========================================
-# Use:
-#   SELECTED_MATERIALS = "ALL"
-#   SELECTED_MATERIALS = "1"
-#   SELECTED_MATERIALS = "1,5,8"
-#   SELECTED_MATERIALS = [1,5,8]
-#SELECTED_MATERIALS = "11,7,6,2"
-
+#Material Index Map:
+#1: PLA Basic
+#2: ABS
+#3: ASA
+#4: PETG HF
+#5: TPU 95A HF
+#6: PA6-CF
+#7: PPS-CF (Fiberon)
+#8: 316L AM
+#9: 17-4PH AM (EOS)
+#10: 17-4PH AM (H900)
+#11: Maraging MS1 (EOS)
 
 # ==========================================
 # Material selection system
 # ==========================================
 # Use:
-SELECTED_MATERIALS = "ALL"
+#SELECTED_MATERIALS = "ALL"
 #   SELECTED_MATERIALS = "1"
 #   SELECTED_MATERIALS = "1,5,8"
 #   SELECTED_MATERIALS = [1,5,8]
-#SELECTED_MATERIALS = "11,7,6,2,1,4"
+SELECTED_MATERIALS = "11,7,6,2"
    # e.g. "PLA Basic", "ABS", "316L AM", "Maraging MS1 (EOS)"
 
 # Wheel geometry
@@ -300,7 +305,8 @@ lines2, labels2 = axT.get_legend_handles_labels()
 ax.legend(lines1 + lines2, labels1 + labels2, loc="upper left", fontsize=6.3, framealpha=0.95, ncol=2)
 
 plt.tight_layout()
-plt.show()
+plt.show(block=False)
+plt.pause(0.1)
 
 # -----------------------------
 # FIGURE 2: Wear / degradation proxy per 15s cut
